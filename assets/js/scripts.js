@@ -178,3 +178,17 @@ $(document).ready(function() {
     $('#chassis_next').select2();
 });
 
+$(document).ready(function(){
+    $(document).on("click",".btnActivate", function(){
+        var vehicle_id=$(this).attr("vehicle_id");
+        var vehicleType=$(this).attr("vehicleType");
+        var data=new FormData();
+        data.append("activateId",vehicle_id);
+        data.append("changeType",vehicle_id);
+        $.ajax({
+            url:'ajax/users.ajax.php',
+            method:'POST',
+            
+        })
+    })
+})

@@ -146,9 +146,9 @@
                                     </td>
                                     <td>
                                     <?php if ($value->type==1): ?>
-                                        <a href="?type=0&id=<?=$value->id?>">Type II</a>
+                                        <a class='btnActivate' vehicle_id="<?=$value->id?>" vehicleType="0">Type II</a>
                                     <?php else:?>
-                                        <a href="?type=1&id=<?=$value->id?>">Type I</a>
+                                        <a class='btnActivate' vehicle_id="<?=$value->id?>" vehicleType="1">Type I</a>
                                     <?php endif;?>
                                     </td>
                                     <td><a href="update-location.php?id=<?=$value->id?>"><?php $get_stock_location=StockLocation::find($value->stock_location); echo $get_stock_location->stock_loc_name; ?></a></td>
